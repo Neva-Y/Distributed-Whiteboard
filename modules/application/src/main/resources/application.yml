@@ -1,0 +1,7 @@
+application:
+  name: whiteboard-service
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    web-application-type: none

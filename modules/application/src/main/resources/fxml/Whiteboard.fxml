@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1199.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.application.javafx.WhiteboardController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar fx:id="menuBar" prefHeight="20.0" prefWidth="598.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newCanvas" text="new" />
+                        <MenuItem mnemonicParsing="false" onAction="#open" text="open" />
+                        <MenuItem mnemonicParsing="false" onAction="#save" text="save" />
+                        <MenuItem mnemonicParsing="false" onAction="#saveAs" text="saveAs" />
+                        <MenuItem mnemonicParsing="false" onAction="#close" text="close" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </top>
+   <right>
+      <VBox prefHeight="521.0" prefWidth="163.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="listView" fixedCellSize="0.0" prefHeight="461.0" prefWidth="173.0" />
+                  <Button fx:id="kickButton" layoutX="61.0" layoutY="469.0" mnemonicParsing="false" onAction="#onClickKick" text="Kick" textFill="RED" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </right>
+   <left>
+      <VBox prefHeight="707.0" prefWidth="102.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="503.0" prefWidth="135.0">
+               <children>
+                  <ColorPicker fx:id="colorPicker" layoutX="1.0" layoutY="1.0" />
+                  <Slider fx:id="slider" layoutX="-1.0" layoutY="27.0" />
+                  <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="52.0" prefHeight="15.0" prefWidth="102.0" text="Select" textAlignment="CENTER" />
+                  <Accordion />
+                  <Button fx:id="pencil" layoutX="19.0" layoutY="278.0" mnemonicParsing="false" onAction="#onClickPencil" prefHeight="30.0" prefWidth="101.0" text="Pencil">
+            </Button>
+                  <Button fx:id="circle" layoutX="18.0" layoutY="236.0" mnemonicParsing="false" onAction="#onClickCircle" prefHeight="31.0" prefWidth="101.0" text="Circle" />
+                  <Button fx:id="oval" layoutX="18.0" layoutY="198.0" mnemonicParsing="false" onAction="#onClickOval" prefHeight="28.0" prefWidth="101.0" text="Oval" />
+                  <Button fx:id="rectangle" layoutX="18.0" layoutY="156.0" mnemonicParsing="false" onAction="#onClickRectangle" prefHeight="31.0" prefWidth="101.0" text="Rectangle" />
+                  <Button fx:id="line" layoutX="19.0" layoutY="77.0" mnemonicParsing="false" onAction="#onClickLine" prefHeight="30.0" prefWidth="101.0" text="Line" />
+                  <Button fx:id="text" layoutX="19.0" layoutY="119.0" mnemonicParsing="false" onAction="#onClickText" prefHeight="28.0" prefWidth="101.0" text="Text" />
+                  <Button fx:id="eraser" layoutX="19.0" layoutY="319.0" mnemonicParsing="false" onAction="#onClickEraser" prefHeight="30.0" prefWidth="101.0" text="Eraser" textFill="RED" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <VBox prefHeight="154.0" prefWidth="1199.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane fx:id="msgPane" prefHeight="272.0" prefWidth="1199.0" />
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <left>
+                  <TextField fx:id="msgField" prefHeight="31.0" prefWidth="1103.0" promptText="Type message here!" BorderPane.alignment="CENTER" />
+               </left>
+               <right>
+                  <Button fx:id="send" mnemonicParsing="false" onAction="#sendMessage" prefHeight="37.0" prefWidth="91.0" text="Send" BorderPane.alignment="CENTER" />
+               </right>
+            </BorderPane>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <Pane fx:id="pane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      </Pane>
+   </center>
+</BorderPane>
