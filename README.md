@@ -1,6 +1,6 @@
 # Distributed Whiteboard App
 
-This is a distributed whiteboard application that utilises Java RMI for the server and JavaFX library for the GUI interface
+This is a distributed whiteboard application that utilises Java RMI for the server and JavaFX library for the GUI interface. It allows multiple users to collaborate in **real-time** on a shared canvas, making it an excellent demonstration of **distributed systems communication and state synchronisation** using Java RMI.
 
 <p align="center"> 
     <img src="Images/DrawingTest.png" alt="Example of the App" width="700">
