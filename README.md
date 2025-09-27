@@ -16,7 +16,7 @@ java -jar WhiteboardServer.jar "host IP" "port"
 java -jar WhiteboardApp.jar "host IP" "port" "username"
 ```
 
-## System Design
+## Technical Details
 <p align="center">
     <img src="Images/UML_P1.jpeg" alt="Whiteboard App and Controller UML" width="700">
     <br>
